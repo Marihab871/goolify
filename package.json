@@ -1,11 +1,12 @@
 {
-  "name": "cra",
+  "name": "goolify",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node backend/server.js",
-    "server": "nodemon backend/server.js"
+    "server": "nodemon backend/server.js",
+    "client":"npm start --prefix frontend"
   },
   "keywords": [],
   "author": "",

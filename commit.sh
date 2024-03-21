@@ -1,5 +1,13 @@
 #!/bin/bash
 
-git add .
-git commit -m "$1"
-(( git log --online ))
+if (( $? == "c" ))
+then
+    git add .
+    git commit -m "$?"
+    git log 
+elif (( $? == "p" ))
+then
+    git push
+else
+    echo "Give an argument please"
+fi

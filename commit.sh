@@ -2,4 +2,4 @@
 
 git add .
 git commit -m "$1"
-git log --online
+(( git log --online ))

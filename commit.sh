@@ -1,13 +1,16 @@
 #!/bin/bash
 
-if (( $? == "c" ))
+if [ -n "$1" ]
 then
-    git add .
-    git commit -m "$?"
-    git log 
-elif (( $? == "p" ))
-then
-    git push
-else
-    echo "Give an argument please"
+    if (( $1 == "c" ))
+    then 
+        git add .
+        git commit -m "$1"
+        git log 
+    elif (( $1 == "p" ))
+    then
+        git push
+    else
+        echo "Give an argument please"
+    fi
 fi
